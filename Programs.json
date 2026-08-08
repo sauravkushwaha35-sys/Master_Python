@@ -1,0 +1,388 @@
+[
+    {
+        "title": "Hello World",
+        "category": "Basics",
+        "desc": "The classic first program.",
+        "file": "hello.py",
+        "code": "# hello.py\nprint(\"Hello, World! Welcome to Master Python Programs.\")"
+    },
+    {
+        "title": "Factorial",
+        "category": "Math",
+        "desc": "Calculates factorial of a number.",
+        "file": "factorial.py",
+        "code": "# factorial.py\ndef factorial(n):\n    result = 1\n    for i in range(2, n+1):\n        result *= i\n    return result\n\nnum = int(input(\"Enter a number: \"))\nprint(f\"Factorial of {num} is {factorial(num)}\")"
+    },
+    {
+        "title": "Fibonacci Series",
+        "category": "Math",
+        "desc": "Generates Fibonacci numbers up to N terms.",
+        "file": "fibonacci.py",
+        "code": "# fibonacci.py\nn = int(input(\"How many Fibonacci numbers? \"))\na, b = 0, 1\nfor _ in range(n):\n    print(a, end=\" \")\n    a, b = b, a + b\nprint()"
+    },
+    {
+        "title": "Prime Number Check",
+        "category": "Numbers",
+        "desc": "Checks if a number is prime.",
+        "file": "prime_check.py",
+        "code": "# prime_check.py\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5)+1):\n        if n % i == 0:\n            return False\n    return True\n\nnum = int(input(\"Enter a number: \"))\nprint(f\"{num} is prime? {is_prime(num)}\")"
+    },
+    {
+        "title": "Palindrome (String)",
+        "category": "Strings",
+        "desc": "Checks if a string is a palindrome.",
+        "file": "palindrome_string.py",
+        "code": "# palindrome_string.py\ns = input(\"Enter a string: \")\ncleaned = s.lower().replace(\" \", \"\")\nif cleaned == cleaned[::-1]:\n    print(\"Palindrome\")\nelse:\n    print(\"Not a palindrome\")"
+    },
+    {
+        "title": "Palindrome (Number)",
+        "category": "Numbers",
+        "desc": "Checks if a number is a palindrome.",
+        "file": "palindrome_number.py",
+        "code": "# palindrome_number.py\nnum = int(input(\"Enter a number: \"))\noriginal = num\nrev = 0\nwhile num > 0:\n    rev = rev * 10 + num % 10\n    num //= 10\nif original == rev:\n    print(\"Palindrome\")\nelse:\n    print(\"Not a palindrome\")"
+    },
+    {
+        "title": "Reverse a String",
+        "category": "Strings",
+        "desc": "Reverses a string.",
+        "file": "reverse_string.py",
+        "code": "# reverse_string.py\ns = input(\"Enter a string: \")\nprint(\"Reversed:\", s[::-1])"
+    },
+    {
+        "title": "Reverse an Integer",
+        "category": "Numbers",
+        "desc": "Reverses digits of an integer.",
+        "file": "reverse_integer.py",
+        "code": "# reverse_integer.py\nnum = int(input(\"Enter an integer: \"))\nrev = 0\nn = abs(num)\nwhile n > 0:\n    rev = rev * 10 + n % 10\n    n //= 10\nif num < 0:\n    rev = -rev\nprint(\"Reversed:\", rev)"
+    },
+    {
+        "title": "Armstrong Number",
+        "category": "Numbers",
+        "desc": "Checks if a number is an Armstrong number.",
+        "file": "armstrong.py",
+        "code": "# armstrong.py\nnum = int(input(\"Enter a number: \"))\norder = len(str(num))\nsum = 0\ntemp = num\nwhile temp > 0:\n    digit = temp % 10\n    sum += digit ** order\n    temp //= 10\nif num == sum:\n    print(num, \"is an Armstrong number\")\nelse:\n    print(num, \"is not an Armstrong number\")"
+    },
+    {
+        "title": "Sum of Digits",
+        "category": "Numbers",
+        "desc": "Calculates sum of digits of an integer.",
+        "file": "sum_of_digits.py",
+        "code": "# sum_of_digits.py\nnum = int(input(\"Enter a number: \"))\ntotal = 0\nn = abs(num)\nwhile n > 0:\n    total += n % 10\n    n //= 10\nprint(\"Sum of digits:\", total)"
+    },
+    {
+        "title": "Area of Circle",
+        "category": "Geometry",
+        "desc": "Calculates area of a circle.",
+        "file": "area_circle.py",
+        "code": "# area_circle.py\nimport math\nr = float(input(\"Enter radius: \"))\narea = math.pi * r * r\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Area of Triangle (Base/Height)",
+        "category": "Geometry",
+        "desc": "Area = 0.5 * base * height.",
+        "file": "area_triangle_base.py",
+        "code": "# area_triangle_base.py\nbase = float(input(\"Enter base: \"))\nheight = float(input(\"Enter height: \"))\narea = 0.5 * base * height\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Area of Triangle (Heron's Formula)",
+        "category": "Geometry",
+        "desc": "Area using three sides.",
+        "file": "area_triangle_heron.py",
+        "code": "# area_triangle_heron.py\nimport math\na = float(input(\"Enter side a: \"))\nb = float(input(\"Enter side b: \"))\nc = float(input(\"Enter side c: \"))\ns = (a + b + c) / 2\narea = math.sqrt(s * (s - a) * (s - b) * (s - c))\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Area of Rectangle",
+        "category": "Geometry",
+        "desc": "Area = length * breadth.",
+        "file": "area_rectangle.py",
+        "code": "# area_rectangle.py\nlength = float(input(\"Enter length: \"))\nbreadth = float(input(\"Enter breadth: \"))\narea = length * breadth\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Area of Square",
+        "category": "Geometry",
+        "desc": "Area = side * side.",
+        "file": "area_square.py",
+        "code": "# area_square.py\nside = float(input(\"Enter side: \"))\narea = side * side\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Area of Parallelogram",
+        "category": "Geometry",
+        "desc": "Area = base * height.",
+        "file": "area_parallelogram.py",
+        "code": "# area_parallelogram.py\nbase = float(input(\"Enter base: \"))\nheight = float(input(\"Enter height: \"))\narea = base * height\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Area of Trapezium",
+        "category": "Geometry",
+        "desc": "Area = 0.5 * (a + b) * h.",
+        "file": "area_trapezium.py",
+        "code": "# area_trapezium.py\na = float(input(\"Enter length of parallel side a: \"))\nb = float(input(\"Enter length of parallel side b: \"))\nh = float(input(\"Enter height: \"))\narea = 0.5 * (a + b) * h\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Area of Rhombus (Diagonals)",
+        "category": "Geometry",
+        "desc": "Area = 0.5 * d1 * d2.",
+        "file": "area_rhombus.py",
+        "code": "# area_rhombus.py\nd1 = float(input(\"Enter diagonal 1: \"))\nd2 = float(input(\"Enter diagonal 2: \"))\narea = 0.5 * d1 * d2\nprint(f\"Area = {area:.2f}\")"
+    },
+    {
+        "title": "Perimeter of Circle (Circumference)",
+        "category": "Geometry",
+        "desc": "Circumference = 2 * π * r.",
+        "file": "perimeter_circle.py",
+        "code": "# perimeter_circle.py\nimport math\nr = float(input(\"Enter radius: \"))\ncircumference = 2 * math.pi * r\nprint(f\"Circumference = {circumference:.2f}\")"
+    },
+    {
+        "title": "Perimeter of Triangle",
+        "category": "Geometry",
+        "desc": "Sum of three sides.",
+        "file": "perimeter_triangle.py",
+        "code": "# perimeter_triangle.py\na = float(input(\"Enter side a: \"))\nb = float(input(\"Enter side b: \"))\nc = float(input(\"Enter side c: \"))\nperimeter = a + b + c\nprint(f\"Perimeter = {perimeter:.2f}\")"
+    },
+    {
+        "title": "Perimeter of Rectangle",
+        "category": "Geometry",
+        "desc": "Perimeter = 2 * (length + breadth).",
+        "file": "perimeter_rectangle.py",
+        "code": "# perimeter_rectangle.py\nlength = float(input(\"Enter length: \"))\nbreadth = float(input(\"Enter breadth: \"))\nperimeter = 2 * (length + breadth)\nprint(f\"Perimeter = {perimeter:.2f}\")"
+    },
+    {
+        "title": "Perimeter of Square",
+        "category": "Geometry",
+        "desc": "Perimeter = 4 * side.",
+        "file": "perimeter_square.py",
+        "code": "# perimeter_square.py\nside = float(input(\"Enter side: \"))\nperimeter = 4 * side\nprint(f\"Perimeter = {perimeter:.2f}\")"
+    },
+    {
+        "title": "Volume of Cube",
+        "category": "Geometry",
+        "desc": "Volume = side^3.",
+        "file": "volume_cube.py",
+        "code": "# volume_cube.py\nside = float(input(\"Enter side: \"))\nvolume = side ** 3\nprint(f\"Volume = {volume:.2f}\")"
+    },
+    {
+        "title": "Volume of Cuboid",
+        "category": "Geometry",
+        "desc": "Volume = l * b * h.",
+        "file": "volume_cuboid.py",
+        "code": "# volume_cuboid.py\nl = float(input(\"Enter length: \"))\nb = float(input(\"Enter breadth: \"))\nh = float(input(\"Enter height: \"))\nvolume = l * b * h\nprint(f\"Volume = {volume:.2f}\")"
+    },
+    {
+        "title": "Volume of Cylinder",
+        "category": "Geometry",
+        "desc": "Volume = π * r^2 * h.",
+        "file": "volume_cylinder.py",
+        "code": "# volume_cylinder.py\nimport math\nr = float(input(\"Enter radius: \"))\nh = float(input(\"Enter height: \"))\nvolume = math.pi * r * r * h\nprint(f\"Volume = {volume:.2f}\")"
+    },
+    {
+        "title": "Volume of Cone",
+        "category": "Geometry",
+        "desc": "Volume = (1/3) * π * r^2 * h.",
+        "file": "volume_cone.py",
+        "code": "# volume_cone.py\nimport math\nr = float(input(\"Enter radius: \"))\nh = float(input(\"Enter height: \"))\nvolume = (1/3) * math.pi * r * r * h\nprint(f\"Volume = {volume:.2f}\")"
+    },
+    {
+        "title": "Volume of Sphere",
+        "category": "Geometry",
+        "desc": "Volume = (4/3) * π * r^3.",
+        "file": "volume_sphere.py",
+        "code": "# volume_sphere.py\nimport math\nr = float(input(\"Enter radius: \"))\nvolume = (4/3) * math.pi * r ** 3\nprint(f\"Volume = {volume:.2f}\")"
+    },
+    {
+        "title": "Volume of Hemisphere",
+        "category": "Geometry",
+        "desc": "Volume = (2/3) * π * r^3.",
+        "file": "volume_hemisphere.py",
+        "code": "# volume_hemisphere.py\nimport math\nr = float(input(\"Enter radius: \"))\nvolume = (2/3) * math.pi * r ** 3\nprint(f\"Volume = {volume:.2f}\")"
+    },
+    {
+        "title": "GCD (HCF)",
+        "category": "Math",
+        "desc": "Greatest Common Divisor.",
+        "file": "gcd.py",
+        "code": "# gcd.py\na = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nwhile b:\n    a, b = b, a % b\nprint(f\"GCD = {a}\")"
+    },
+    {
+        "title": "LCM",
+        "category": "Math",
+        "desc": "Least Common Multiple.",
+        "file": "lcm.py",
+        "code": "# lcm.py\na = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nx, y = a, b\nwhile y:\n    x, y = y, x % y\ngcd = x\nlcm = (a * b) // gcd\nprint(f\"LCM = {lcm}\")"
+    },
+    {
+        "title": "Simple Interest",
+        "category": "Math",
+        "desc": "SI = (P * R * T) / 100.",
+        "file": "simple_interest.py",
+        "code": "# simple_interest.py\nP = float(input(\"Enter principal: \"))\nR = float(input(\"Enter rate of interest: \"))\nT = float(input(\"Enter time (years): \"))\nSI = (P * R * T) / 100\nprint(f\"Simple Interest = {SI:.2f}\")"
+    },
+    {
+        "title": "Compound Interest",
+        "category": "Math",
+        "desc": "CI = P * (1 + R/100)^T - P.",
+        "file": "compound_interest.py",
+        "code": "# compound_interest.py\nP = float(input(\"Enter principal: \"))\nR = float(input(\"Enter rate of interest: \"))\nT = float(input(\"Enter time (years): \"))\nCI = P * (1 + R/100)**T - P\nprint(f\"Compound Interest = {CI:.2f}\")"
+    },
+    {
+        "title": "Multiplication Table",
+        "category": "Numbers",
+        "desc": "Prints table of a given number.",
+        "file": "multiplication_table.py",
+        "code": "# multiplication_table.py\nnum = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(f\"{num} x {i} = {num * i}\")"
+    },
+    {
+        "title": "Check Even or Odd",
+        "category": "Numbers",
+        "desc": "Determines if a number is even or odd.",
+        "file": "even_odd.py",
+        "code": "# even_odd.py\nnum = int(input(\"Enter a number: \"))\nif num % 2 == 0:\n    print(\"Even\")\nelse:\n    print(\"Odd\")"
+    },
+    {
+        "title": "Leap Year Check",
+        "category": "Numbers",
+        "desc": "Checks if a year is leap.",
+        "file": "leap_year.py",
+        "code": "# leap_year.py\nyear = int(input(\"Enter a year: \"))\nif (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):\n    print(\"Leap Year\")\nelse:\n    print(\"Not a Leap Year\")"
+    },
+    {
+        "title": "Largest Among Three Numbers",
+        "category": "Numbers",
+        "desc": "Finds the maximum of three numbers.",
+        "file": "largest_three.py",
+        "code": "# largest_three.py\na = float(input(\"Enter first number: \"))\nb = float(input(\"Enter second number: \"))\nc = float(input(\"Enter third number: \"))\nlargest = max(a, b, c)\nprint(f\"Largest = {largest}\")"
+    },
+    {
+        "title": "Sum of Natural Numbers",
+        "category": "Math",
+        "desc": "Sum = n*(n+1)/2.",
+        "file": "sum_natural.py",
+        "code": "# sum_natural.py\nn = int(input(\"Enter n: \"))\nsum_n = n * (n + 1) // 2\nprint(f\"Sum of first {n} natural numbers = {sum_n}\")"
+    },
+    {
+        "title": "Perfect Number Check",
+        "category": "Numbers",
+        "desc": "Checks if a number is perfect (sum of proper divisors equals number).",
+        "file": "perfect_number.py",
+        "code": "# perfect_number.py\nnum = int(input(\"Enter a number: \"))\nsum_div = 0\nfor i in range(1, num):\n    if num % i == 0:\n        sum_div += i\nif sum_div == num:\n    print(num, \"is a Perfect number\")\nelse:\n    print(num, \"is not a Perfect number\")"
+    },
+    {
+        "title": "Strong Number Check",
+        "category": "Numbers",
+        "desc": "Checks if sum of factorials of digits equals the number.",
+        "file": "strong_number.py",
+        "code": "# strong_number.py\ndef fact(n):\n    f = 1\n    for i in range(2, n+1):\n        f *= i\n    return f\n\nnum = int(input(\"Enter a number: \"))\ntemp = num\nsum_fact = 0\nwhile temp > 0:\n    digit = temp % 10\n    sum_fact += fact(digit)\n    temp //= 10\nif sum_fact == num:\n    print(num, \"is a Strong number\")\nelse:\n    print(num, \"is not a Strong number\")"
+    },
+    {
+        "title": "Decimal to Binary",
+        "category": "Conversions",
+        "desc": "Converts decimal to binary.",
+        "file": "decimal_to_binary.py",
+        "code": "# decimal_to_binary.py\ndecimal = int(input(\"Enter decimal number: \"))\nprint(\"Binary:\", bin(decimal)[2:])"
+    },
+    {
+        "title": "Binary to Decimal",
+        "category": "Conversions",
+        "desc": "Converts binary string to decimal.",
+        "file": "binary_to_decimal.py",
+        "code": "# binary_to_decimal.py\nbinary = input(\"Enter binary number: \")\ndecimal = int(binary, 2)\nprint(\"Decimal:\", decimal)"
+    },
+    {
+        "title": "Celsius to Fahrenheit",
+        "category": "Conversions",
+        "desc": "Converts temperature.",
+        "file": "celsius_to_fahrenheit.py",
+        "code": "# celsius_to_fahrenheit.py\nc = float(input(\"Enter Celsius: \"))\nf = (c * 9/5) + 32\nprint(f\"Fahrenheit = {f:.2f}\")"
+    },
+    {
+        "title": "Fahrenheit to Celsius",
+        "category": "Conversions",
+        "desc": "Converts temperature.",
+        "file": "fahrenheit_to_celsius.py",
+        "code": "# fahrenheit_to_celsius.py\nf = float(input(\"Enter Fahrenheit: \"))\nc = (f - 32) * 5/9\nprint(f\"Celsius = {c:.2f}\")"
+    },
+    {
+        "title": "Count Vowels & Consonants",
+        "category": "Strings",
+        "desc": "Counts vowels and consonants in a string.",
+        "file": "count_vowels_consonants.py",
+        "code": "# count_vowels_consonants.py\ns = input(\"Enter a string: \").lower()\nvowels = \"aeiou\"\nv = c = 0\nfor ch in s:\n    if ch.isalpha():\n        if ch in vowels:\n            v += 1\n        else:\n            c += 1\nprint(f\"Vowels: {v}, Consonants: {c}\")"
+    },
+    {
+        "title": "String Length without len()",
+        "category": "Strings",
+        "desc": "Calculates length manually.",
+        "file": "string_length.py",
+        "code": "# string_length.py\ns = input(\"Enter a string: \")\ncount = 0\nfor _ in s:\n    count += 1\nprint(\"Length:\", count)"
+    },
+    {
+        "title": "Swap Two Variables",
+        "category": "Basics",
+        "desc": "Swaps using a temporary variable and without.",
+        "file": "swap_variables.py",
+        "code": "# swap_variables.py\na = input(\"Enter a: \")\nb = input(\"Enter b: \")\nprint(f\"Before swap: a={a}, b={b}\")\na, b = b, a\nprint(f\"After swap: a={a}, b={b}\")"
+    },
+    {
+        "title": "ASCII Value of Character",
+        "category": "Basics",
+        "desc": "Prints ASCII value of a character.",
+        "file": "ascii_value.py",
+        "code": "# ascii_value.py\nch = input(\"Enter a character: \")\nprint(f\"ASCII value of '{ch}' is {ord(ch)}\")"
+    }
+      {
+        "title": "Vowel Counter Only",
+        "category": "Strings",
+        "desc": "Counts only vowels (no consonants).",
+        "file": "vowel_counter.py",
+        "code": "# vowel_counter.py\ns = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\ncount = sum(1 for ch in s if ch in vowels)\nprint(\"Number of vowels:\", count)"
+    },
+    {
+        "title": "Print Only Vowels",
+        "category": "Strings",
+        "desc": "Prints only the vowels from a string.",
+        "file": "print_vowels.py",
+        "code": "# print_vowels.py\ns = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch in vowels)\nprint(\"Vowels found:\", result)"
+    },
+    {
+        "title": "Convert Vowels to Uppercase",
+        "category": "Strings",
+        "desc": "Uppercases all vowels in a string.",
+        "file": "vowels_upper.py",
+        "code": "# vowels_upper.py\ns = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch.upper() if ch.lower() in \"aeiou\" else ch for ch in s)\nprint(\"Transformed:\", result)"
+    },
+    {
+        "title": "Print Only Lowercase Vowels",
+        "category": "Strings",
+        "desc": "Extracts and prints vowels in lowercase only.",
+        "file": "lowercase_vowels.py",
+        "code": "# lowercase_vowels.py\ns = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch.lower() for ch in s if ch in vowels)\nprint(\"Lowercase vowels:\", result)"
+    },
+    {
+        "title": "Remove Vowels",
+        "category": "Strings",
+        "desc": "Returns the string without any vowels.",
+        "file": "remove_vowels.py",
+        "code": "# remove_vowels.py\ns = input(\"Enter a string: \")\nresult = \"\".join(ch for ch in s if ch.lower() not in \"aeiou\")\nprint(\"Without vowels:\", result)"
+    },
+    {
+        "title": "Replace Vowels with *",
+        "category": "Strings",
+        "desc": "Replaces every vowel with an asterisk.",
+        "file": "replace_vowels.py",
+        "code": "# replace_vowels.py\ns = input(\"Enter a string: \")\nresult = \"\".join('*' if ch.lower() in \"aeiou\" else ch for ch in s)\nprint(\"Replaced:\", result)"
+    },
+    {
+        "title": "Count Each Vowel Individually",
+        "category": "Strings",
+        "desc": "Counts occurrences of a, e, i, o, u separately.",
+        "file": "count_each_vowel.py",
+        "code": "# count_each_vowel.py\ns = input(\"Enter a string: \").lower()\nfor v in \"aeiou\":\n    print(f\"{v}: {s.count(v)}\")"
+    },
+    {
+        "title": "Toggle Case of Vowels",
+        "category": "Strings",
+        "desc": "Swaps case of vowels (a↔A, e↔E, ...).",
+        "file": "toggle_vowels.py",
+        "code": "# toggle_vowels.py\ns = input(\"Enter a string: \")\nresult = \"\".join(ch.swapcase() if ch.lower() in \"aeiou\" else ch for ch in s)\nprint(\"Toggled:\", result)"
+    }
+
+]
