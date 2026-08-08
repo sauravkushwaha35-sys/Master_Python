@@ -383,6 +383,13 @@
         "desc": "Swaps case of vowels (a↔A, e↔E, ...).",
         "file": "toggle_vowels.py",
         "code": "# toggle_vowels.py\ns = input(\"Enter a string: \")\nresult = \"\".join(ch.swapcase() if ch.lower() in \"aeiou\" else ch for ch in s)\nprint(\"Toggled:\", result)"
+    },
+    {
+    "title": "LCM",
+    "category": "Math",
+    "desc": "Least Common Multiple of two numbers.",
+    "file": "lcm.py",
+    "code": "# lcm.py\na = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nx, y = a, b\nwhile y:\n    x, y = y, x % y\ngcd = x\nlcm = (a * b) // gcd\nprint(f\"LCM = {lcm}\")"
     }
 
 ]
